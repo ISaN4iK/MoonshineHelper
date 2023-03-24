@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B81F2B41-7EAA-4516-AAB9-F8A7815AD60B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RGRv2</RootNamespace>
+    <AssemblyName>RGRv2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.27.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.27\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddContainer.Designer.cs">
+      <DependentUpon>AddContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFlaver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFlaver.Designer.cs">
+      <DependentUpon>AddFlaver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMaterial.Designer.cs">
+      <DependentUpon>AddMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTypeContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTypeContainer.Designer.cs">
+      <DependentUpon>AddTypeContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddMoonshine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddMoonshine.Designer.cs">
+      <DependentUpon>FormAddMoonshine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMoonshine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMoonshine.Designer.cs">
+      <DependentUpon>FormMoonshine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAuthorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAuthorization.Designer.cs">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="moonshineDataSet.cs">
+      <DependentUpon>moonshineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="moonshineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moonshineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetFlaver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetFlaver.Designer.cs">
+      <DependentUpon>SetFlaver.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddContainer.resx">
+      <DependentUpon>AddContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFlaver.resx">
+      <DependentUpon>AddFlaver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMaterial.resx">
+      <DependentUpon>AddMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTypeContainer.resx">
+      <DependentUpon>AddTypeContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddMoonshine.resx">
+      <DependentUpon>FormAddMoonshine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMoonshine.resx">
+      <DependentUpon>FormMoonshine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAuthorization.resx">
+      <DependentUpon>FormAuthorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SetFlaver.resx">
+      <DependentUpon>SetFlaver.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="moonshineDataSet.xsc">
+      <DependentUpon>moonshineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="moonshineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>moonshineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="moonshineDataSet.xss">
+      <DependentUpon>moonshineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4e2dad96e65b7cf9d0041778a0019ae7.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
